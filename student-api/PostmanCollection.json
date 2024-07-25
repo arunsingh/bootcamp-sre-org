@@ -1,0 +1,132 @@
+{
+  "info": {
+    "name": "Student CRUD API",
+    "_postman_id": "d123e456-789b-12d3-a456-426614174000",
+    "description": "Postman collection for Student CRUD API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add Student",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"John Doe\",\n  \"age\": 20,\n  \"grade\": \"A\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/students",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "students"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Students",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/v1/students",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "students"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Student by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/v1/students/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "students", ":id"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Student",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Jane Doe\",\n  \"age\": 21,\n  \"grade\": \"B\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/students/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "students", ":id"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Student",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:5000/api/v1/students/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "students", ":id"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Healthcheck",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5000/api/v1/healthcheck",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "v1", "healthcheck"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
